@@ -268,8 +268,8 @@ main {
 .delete-button,
 .edit-button,
 .complete-button {
-  width: 25px;
-  height: 25px;
+  width: 45px;
+  height: 45px;
 
   padding: 0;
 
