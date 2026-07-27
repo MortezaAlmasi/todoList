@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="app-name">TODO APP</div>
+
+      <div class="calendar-icon">
+        <img src="./icons/Vector.svg" alt="Calendar Icon" />
+      </div>
+    </header>
+
+    <main>
+      <div class="todo-container">
+        <!-- <div class="todo-card">
+          <div class="todo-details">
+            <p class="todo-title">Todo Title</p>
+            <p class="todo-caption">Todo caption</p>
+          </div>
+
+          <div class="todo-buttons">
+            <button
+              class="delete-button"
+              type="button"
+              aria-label="Delete Todo"
+            >
+              <img src="./icons/delete.svg" alt="" />
+            </button>
+
+            <button class="edit-button" type="button" aria-label="Edit Todo">
+              <img src="./icons/edit.svg" alt="" />
+            </button>
+
+            <button
+              class="complete-button"
+              type="button"
+              aria-label="Complete Todo"
+            >
+              <img src="./icons/Tick.svg" alt="" />
+            </button>
+          </div>
+        </div> -->
+      </div>
+      <section class="new-todo-modal">
+        <div class="new-todo-header">
+          <button class="back-page-button">
+            <img
+              src="/icons/Turn BackPage Button.svg"
+              alt="Turn BackPage Button"
+            />
+          </button>
+          <p>Add Task</p>
+        </div>
+        <div class="new-todo-editor">
+          <div class="new-todo-inputs">
+            <input
+              type="text"
+              class="new-todo-title"
+              placeholder="Title"
+              maxlength="50"
+            />
+            <p class="title-counter">50 characters remaining</p>
+
+            <input
+              type="text"
+              class="new-todo-detail"
+              placeholder="Detail"
+              maxlength="120"
+            />
+            <p class="detail-counter">300 characters remaining</p>
+          </div>
+          <button class="new-todo-add-button">Add</button>
+        </div>
+      </section>
+      <section class="edit-todo-modal">
+        <div class="edit-todo-header">
+          <button class="back-page-button">
+            <img
+              src="/icons/Turn BackPage Button.svg"
+              alt="Turn BackPage Button"
+            />
+          </button>
+          <p>Edit Task</p>
+        </div>
+        <div class="edit-todo-editor">
+          <div class="edit-todo-inputs">
+            <input
+              type="text"
+              class="edit-todo-title"
+              placeholder="Title"
+              maxlength="50"
+            />
+            <p class="edit-title-counter">50 characters remaining</p>
+
+            <input
+              type="text"
+              class="edit-todo-detail"
+              placeholder="Detail"
+              maxlength="120"
+            />
+            <p class="edit-detail-counter">120 characters remaining</p>
+          </div>
+          <div class="edit-todo-buttons">
+            <button class="edit-todo-update-button">Update</button>
+            <button class="edit-todo-cancel-button">Cancel</button>
+          </div>
+        </div>
+      </section>
+      <section class="completed-todo-modal">
+        <div class="completed-todo-header">
+          <button class="back-page-button">
+            <img
+              src="/icons/Turn BackPage Button.svg"
+              alt="Turn BackPage Button"
+            />
+          </button>
+          <p>Completed Task</p>
+        </div>
+        <div class="complete-todo-container"></div>
+      </section>
+      <button class="add-button" type="button" aria-label="Add Todo">
+        <img src="./icons/primary.svg" alt="" class="plus-icon" />
+      </button>
+    </main>
+
+    <footer>
+      <button class="all-list-button" type="button">
+        <svg
+          width="19"
+          height="14"
+          viewBox="0 0 19 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M5.75 0C5.33579 0 5 0.335786 5 0.75C5 1.16421 5.33579 1.5 5.75 1.5V0.75V0ZM18.25 1.5C18.6642 1.5 19 1.16421 19 0.75C19 0.335786 18.6642 0 18.25 0V0.75V1.5ZM0.75 0C0.335786 0 0 0.335786 0 0.75C0 1.16421 0.335786 1.5 0.75 1.5V0.75V0ZM2 1.5C2.41421 1.5 2.75 1.16421 2.75 0.75C2.75 0.335786 2.41421 0 2 0V0.75V1.5ZM0.75 6.25C0.335786 6.25 0 6.58579 0 7C0 7.41421 0.335786 7.75 0.75 7.75V7V6.25ZM2 7.75C2.41421 7.75 2.75 7.41421 2.75 7C2.75 6.58579 2.41421 6.25 2 6.25V7V7.75ZM0.75 12.5C0.335786 12.5 0 12.8358 0 13.25C0 13.6642 0.335786 14 0.75 14V13.25V12.5ZM2 14C2.41421 14 2.75 13.6642 2.75 13.25C2.75 12.8358 2.41421 12.5 2 12.5V13.25V14ZM5.75 6.25C5.33579 6.25 5 6.58579 5 7C5 7.41421 5.33579 7.75 5.75 7.75V7V6.25ZM18.25 7.75C18.6642 7.75 19 7.41421 19 7C19 6.58579 18.6642 6.25 18.25 6.25V7V7.75ZM5.75 12.5C5.33579 12.5 5 12.8358 5 13.25C5 13.6642 5.33579 14 5.75 14V13.25V12.5ZM18.25 14C18.6642 14 19 13.6642 19 13.25C19 12.8358 18.6642 12.5 18.25 12.5V13.25V14ZM5.75 0.75V1.5H18.25V0.75V0H5.75V0.75ZM0.75 0.75V1.5H2V0.75V0H0.75V0.75ZM0.75 7V7.75H2V7V6.25H0.75V7ZM0.75 13.25V14H2V13.25V12.5H0.75V13.25ZM5.75 7V7.75H18.25V7V6.25H5.75V7ZM5.75 13.25V14H18.25V13.25V12.5H5.75V13.25Z"
+            fill="#9395D3"
+          />
+        </svg>
+
+        <span>All</span>
+      </button>
+
+      <button class="complete-todo-button" type="button">
+        <svg
+          width="19"
+          height="13"
+          viewBox="0 0 19 13"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.75 6.375L6.58375 12L18.25 0.75"
+            stroke="#9395D3"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <span>Complete</span>
+      </button>
+    </footer>
+
+    <script src="./app/app.js"></script>
+  </body>
+</html>
